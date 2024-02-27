@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN221_Project"
         mc:Ignorable="d"
-        Title="ManageTeacher" Loaded="Window_Loaded" Height="450" Width="710">
+        Title="ManageTeacher" Loaded="Window_Loaded" Height="450" Width="730">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -18,7 +18,7 @@
             
             <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
                 <TextBox Width="200" Name="tbSearch"></TextBox>
-                <Button Margin="4 0 0 0" Width="60">Search</Button>
+                <Button Margin="4 0 0 0" Width="60" Name="btnSearch" Click="btnSearch_Click">Search</Button>
             </StackPanel>
 
             <Label Foreground="Red" FontSize="20">Teacher Information</Label>
@@ -49,8 +49,8 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=TeacherId}">TeacherId</GridViewColumn>
-                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>
-                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Email}">Email</GridViewColumn>
+                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>
+                        <GridViewColumn Width="110" DisplayMemberBinding="{Binding Path=Email}">Email</GridViewColumn>
                         <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Password}">Password</GridViewColumn>
                     </GridView>
                 </ListView.View>

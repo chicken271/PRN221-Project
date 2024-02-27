@@ -168,17 +168,43 @@ namespace PRN221_Project
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-
+            tbSearch.Clear();
+            tbTeacherId.Clear();
+            tbTeacherName.Clear();
+            tbTeacherEmail.Clear();
+            tbTeacherPassword.Clear();
         }
 
         private void btnReload_Click(object sender, RoutedEventArgs e)
         {
-
+            LoadData();
         }
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string errorMessage = "";
+                if (string.IsNullOrEmpty(tbSearch.Text))
+                {
+                    errorMessage += "Search bar input is empty\n";
+                }
+                else
+                {
+                    var searchResult = context.Teachers.Where(x => x.TeacherId == tbSearch.Text || x.Name.Contains(tbSearch.Text)).ToList();
+                    lvTeacher.ItemsSource = searchResult;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

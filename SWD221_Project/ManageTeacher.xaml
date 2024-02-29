@@ -23,13 +23,13 @@
 
             <Label Foreground="Red" FontSize="20">Teacher Information</Label>
             <Label>TeacherId</Label>
-            <TextBox Name="tbTeacherId" Text="{Binding Path=TeacherId}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
+            <TextBox Name="tbTeacherId" Text="{Binding Path=TeacherId, Mode=OneWay}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
             <Label>TeacherName</Label>
-            <TextBox Name="tbTeacherName" Text="{Binding Path=Name}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
+            <TextBox Name="tbTeacherName" Text="{Binding Path=Name, Mode=OneWay}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
             <Label>Email</Label>
-            <TextBox Name="tbTeacherEmail" Text="{Binding Path=Email}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
+            <TextBox Name="tbTeacherEmail" Text="{Binding Path=Email, Mode=OneWay}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
             <Label>Password</Label>
-            <TextBox Name="tbTeacherPassword" Text="{Binding Path=Password}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
+            <TextBox Name="tbTeacherPassword" Text="{Binding Path=Password, Mode=OneWay}" DataContext="{Binding ElementName=lvTeacher, Path=SelectedItem}"></TextBox>
 
             <StackPanel Orientation="Horizontal">
                 <Button Margin="8" Height="30" Width="70" Name="btnTeacherAdd" Click="btnTeacherAdd_Click" >Add</Button>

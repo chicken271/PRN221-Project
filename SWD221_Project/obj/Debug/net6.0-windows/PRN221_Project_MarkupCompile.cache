@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\PRN221\SWD221_Project\SWD221_Project\App.xaml
-2-1553559530
+4122740809
 
-13927583193
+151058519814
 220-1477552727
-MainWindow.xaml;ManageTeacher.xaml;
+MainWindow.xaml;ManageClass.xaml;ManageStudent.xaml;ManageTeacher.xaml;
 
 False
 

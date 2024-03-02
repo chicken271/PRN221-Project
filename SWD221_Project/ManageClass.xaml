@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN221_Project"
         mc:Ignorable="d"
-        Title="ManageClass" Height="450" Width="800">
+        Title="ManageClass" Loaded="Window_Loaded" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Background="LightBlue">
+            <Label Foreground="Red" FontSize="30">Manage Class</Label>
+
+
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <TextBox Width="200" Name="tbSearch"></TextBox>
+                <Button Margin="4 0 0 0" Width="60" Name="btnSearch" Click="btnSearch_Click">Search</Button>
+            </StackPanel>
+
+            <Label Foreground="Red" FontSize="20">Class Information</Label>
+            <Label>ClassId</Label>
+            <TextBox Name="tbClassId" Text="{Binding Path=ClassId, Mode=OneWay}" DataContext="{Binding ElementName=lvClass, Path=SelectedItem}"></TextBox>
+            <Label>TeacherId</Label>
+            <ComboBox Name="cbTeacherId" SelectedValue="{Binding Path=TeacherId, Mode=OneWay}" DataContext="{Binding ElementName=lvClass, Path=SelectedItem}"></ComboBox>
+            <Label>ClassName</Label>
+            <TextBox Name="tbClassName" Text="{Binding Path=ClassName, Mode=OneWay}" DataContext="{Binding ElementName=lvClass, Path=SelectedItem}"></TextBox>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="8" Height="30" Width="70" Name="btnAddClass" Click="btnAddClass_Click">Add</Button>
+                <Button Margin="8" Height="30" Width="70" Name="btnUpdateClass" Click="btnUpdateClass_Click">Update</Button>
+                <Button Margin="8" Height="30" Width="70" Name="btnDeleteClass" Click="btnDeleteClass_Click">Delete</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="8" Height="30" Width="70" Name="btnClear" Click="btnClear_Click">Clear</Button>
+                <Button Margin="8" Height="30" Width="70" Name="btnReload" Click="btnReload_Click">Reload</Button>
+                <Button Margin="8" Height="30" Width="70" Name="btnReturn" Click="btnReturn_Click">Return</Button>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="10">
+            <ListView x:Name="lvClass">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="130" DisplayMemberBinding="{Binding Path=ClassId}">ClassId</GridViewColumn>
+                        <GridViewColumn Width="130" DisplayMemberBinding="{Binding Path=TeacherId}">TeacherId</GridViewColumn>
+                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Path=ClassName}">ClassName</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Window>

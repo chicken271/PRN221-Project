@@ -182,7 +182,9 @@ namespace PRN221_Project
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
-
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+            this.Close();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)

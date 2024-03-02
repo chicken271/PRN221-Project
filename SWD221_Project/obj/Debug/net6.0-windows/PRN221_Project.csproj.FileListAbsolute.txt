@@ -64,3 +64,7 @@ D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ManageStudent.g
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ManageStudent.baml
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ManageClass.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ManageClass.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\Login.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\Login.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\AdminDashboard.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\AdminDashboard.baml

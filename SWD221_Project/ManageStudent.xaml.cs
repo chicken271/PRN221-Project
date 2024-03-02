@@ -170,7 +170,7 @@ namespace PRN221_Project
                     //context.Students.Remove(deleStudent);
                     //context.SaveChanges();
                     LoadData();
-                    MessageBox.Show($"Delete teacher with id of {StudentId} Successfully !!");
+                    MessageBox.Show($"Delete student with id of {StudentId} Successfully !!");
                 }
             }
             catch (Exception ex)
@@ -195,7 +195,9 @@ namespace PRN221_Project
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
-
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+            this.Close();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)

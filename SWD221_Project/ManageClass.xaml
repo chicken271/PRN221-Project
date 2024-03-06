@@ -40,6 +40,11 @@
                 <Button Margin="8" Height="30" Width="70" Name="btnReload" Click="btnReload_Click">Reload</Button>
                 <Button Margin="8" Height="30" Width="70" Name="btnReturn" Click="btnReturn_Click">Return</Button>
             </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="5" Height="30" Width="140" Name="btnManageStudentInClass" Click="btnManageStudentInClass_Click">Manage Student in Class</Button>
+                <Button Margin="5" Height="30" Width="140" >Manage Work in Class</Button>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="10">

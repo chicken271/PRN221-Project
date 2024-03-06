@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\PRN221\SWD221_Project\SWD221_Project\App.xaml
-6-1836819561
+7-1617754792
 
-19-996896610
+201327690374
 220-1477552727
-AdminDashboard.xaml;Login.xaml;MainWindow.xaml;ManageClass.xaml;ManageStudent.xaml;ManageTeacher.xaml;
+AdminDashboard.xaml;ClassPopup.xaml;Login.xaml;MainWindow.xaml;ManageClass.xaml;ManageStudent.xaml;ManageTeacher.xaml;
 
-True
+False
 

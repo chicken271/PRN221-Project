@@ -206,5 +206,38 @@ namespace PRN221_Project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnManageStudentInClass_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string errorMessage = "";
+                Class oldClass = CheckClassId();
+                if (string.IsNullOrEmpty(tbClassId.Text))
+                {
+                    errorMessage += "ClassId is a required fiedld\n";
+                }
+
+                if(oldClass == null)
+                {
+                    errorMessage += "Class is not found\n";
+                }
+
+                if(errorMessage != "")
+                {
+                    MessageBox.Show(errorMessage, "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    string ClassId = tbClassId.Text;
+                    ClassPopup classPopup = new ClassPopup(ClassId);
+                    classPopup.Show();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }

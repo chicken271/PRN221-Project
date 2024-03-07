@@ -43,7 +43,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <Button Margin="5" Height="30" Width="140" Name="btnManageStudentInClass" Click="btnManageStudentInClass_Click">Manage Student in Class</Button>
-                <Button Margin="5" Height="30" Width="140" >Manage Work in Class</Button>
+                <Button Margin="5" Height="30" Width="140" Name="btnManageWorkInClass" Click="btnManageWorkInClass_Click">Manage Work in Class</Button>
             </StackPanel>
         </StackPanel>
 

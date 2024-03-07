@@ -25,6 +25,9 @@
     <Compile Update="ManageTeacher.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WorkPopup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AdminDashboard.xaml">
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ManageTeacher.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WorkPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

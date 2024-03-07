@@ -70,3 +70,5 @@ D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\AdminDashboard.
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\AdminDashboard.baml
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ClassPopup.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ClassPopup.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkPopup.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkPopup.baml

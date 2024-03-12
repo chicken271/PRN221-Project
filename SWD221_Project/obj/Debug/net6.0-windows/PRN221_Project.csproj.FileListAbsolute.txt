@@ -72,3 +72,9 @@ D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ClassPopup.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\ClassPopup.baml
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkPopup.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkPopup.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\TeacherDashboard.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\TeacherDashboard.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentsDetails.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentsDetails.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkProgressWindow.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkProgressWindow.baml

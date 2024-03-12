@@ -87,7 +87,9 @@ namespace PRN221_Project
                     }
                     else
                     {
-                        MessageBox.Show(teacher.TeacherId);
+                        TeacherDashboard teacherDashboard = new TeacherDashboard(teacher.TeacherId);
+                        teacherDashboard.Show();
+                        this.Close();
                     }
                 }
 

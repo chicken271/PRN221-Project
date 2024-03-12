@@ -147,6 +147,7 @@ namespace PRN221_Project
                     int WorkId = int.Parse(tbWorkId.Text);
                     Work deleWork = CheckWorkId();
 
+                    List<StudentWorkProgress> deleStudentWorkProgress1 = context.StudentWorkProgresses.Where(x => x.WorkId == WorkId).ToList();
                     List<StudentWorkProgress> deleStudentWorkProgress = context.StudentWorkProgresses.Where(x => x.WorkId == WorkId).ToList();
                     foreach (StudentWorkProgress swp in deleStudentWorkProgress)
                     {

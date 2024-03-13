@@ -28,6 +28,9 @@
     <Compile Update="StudentsDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TakeAttendanceWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="TeacherDashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StudentsDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TakeAttendanceWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TeacherDashboard.xaml">

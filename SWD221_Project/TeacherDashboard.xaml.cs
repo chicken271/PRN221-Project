@@ -175,8 +175,8 @@ namespace PRN221_Project
                 else
                 {
                     string ClassId = tbClassId.Text;
-                    WorkPopup workPopup = new WorkPopup(ClassId);
-                    workPopup.Show();
+                    TakeAttendanceWindow takeAttendanceWindow = new TakeAttendanceWindow(ClassId);
+                    takeAttendanceWindow.Show();
                 }
             }
             catch (Exception ex)

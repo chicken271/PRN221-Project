@@ -102,7 +102,9 @@ namespace PRN221_Project
                     }
                     else
                     {
-                        MessageBox.Show(student.StudentId);
+                        StudentDashboard studentDashboard = new StudentDashboard(student.StudentId);
+                        studentDashboard.Show();
+                        this.Close();
                     }
                 }
 

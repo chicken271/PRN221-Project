@@ -25,6 +25,12 @@
     <Compile Update="ManageTeacher.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="StudentAttendance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StudentDashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="StudentsDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +67,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ManageTeacher.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StudentAttendance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StudentDashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="StudentsDetails.xaml">

@@ -80,3 +80,7 @@ D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkProgressWin
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\WorkProgressWindow.baml
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\TakeAttendanceWindow.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\TakeAttendanceWindow.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentDashboard.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentDashboard.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentAttendance.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentAttendance.baml

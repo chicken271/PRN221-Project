@@ -125,5 +125,33 @@ namespace PRN221_Project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnWorkProgress_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string errorMessage = "";
+                if (string.IsNullOrEmpty(tbClassId.Text))
+                {
+                    errorMessage += "ClassId is a required fiedld\n";
+                }
+
+                if (errorMessage != "")
+                {
+                    MessageBox.Show(errorMessage, "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    string ClassId = tbClassId.Text;
+                    string StudentId = tbStudentId.Text;
+                    StudentWorkProgressWindow sww = new StudentWorkProgressWindow(StudentId,ClassId);
+                    sww.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

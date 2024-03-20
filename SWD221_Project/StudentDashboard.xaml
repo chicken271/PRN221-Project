@@ -38,7 +38,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Button Margin="5" Height="30" Width="70">Work</Button>
+                <Button Margin="5" Height="30" Width="70" Name="btnWorkProgress" Click="btnWorkProgress_Click">Work</Button>
                 <Button Margin="5" Height="30" Width="70" Name="btnAttendance" Click="btnAttendance_Click">Attendance</Button>
             </StackPanel>
 

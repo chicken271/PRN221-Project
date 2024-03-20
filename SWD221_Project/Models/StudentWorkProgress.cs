@@ -6,7 +6,7 @@ namespace SWD221_Project.Models
     public partial class StudentWorkProgress
     {
         public int ProgressId { get; set; }
-        public string? StudentId { get; set; }
+        public string StudentId { get; set; }
         public int? WorkId { get; set; }
         public bool? Complete { get; set; }
 

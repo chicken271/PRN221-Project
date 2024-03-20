@@ -84,3 +84,5 @@ D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentDashboar
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentDashboard.baml
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentAttendance.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentAttendance.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentWorkProgressWindow.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentWorkProgressWindow.baml

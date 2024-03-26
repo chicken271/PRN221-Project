@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:PRN221_Project"
         mc:Ignorable="d"
         Title="StudentWorkProgressWindow" Loaded="Window_Loaded" Height="500" Width="800">
+    <Window.Resources>
+        <local:WorkConverter x:Key="WorkConverter"></local:WorkConverter>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -18,7 +21,7 @@
 
             <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
                 <TextBox Width="200" Name="tbSearch"></TextBox>
-                <Button Margin="4 0 0 0" Width="60" >Search</Button>
+                <Button Margin="4 0 0 0" Width="60" Name="btnSearch" Click="btnSearch_Click" >Search</Button>
             </StackPanel>
 
             <Label Foreground="Red" FontSize="20">Information</Label>
@@ -57,7 +60,7 @@
                         <GridViewColumn Width="110" DisplayMemberBinding="{Binding WorkID}" Header="Work ID"/>
                         <GridViewColumn Width="110" DisplayMemberBinding="{Binding WorkName}" Header="Work Name"/>
                         <GridViewColumn Width="110" DisplayMemberBinding="{Binding WorkDescription}" Header="Work Description"/>
-                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Complete}" Header="Complete"/>
+                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Complete, Converter= {StaticResource WorkConverter}}" Header="Complete"/>
                     </GridView>
                 </ListView.View>
             </ListView>

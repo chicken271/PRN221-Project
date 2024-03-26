@@ -86,3 +86,10 @@ D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentAttendan
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentAttendance.baml
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentWorkProgressWindow.g.cs
 D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\StudentWorkProgressWindow.baml
+D:\PRN221\SWD221_Project\SWD221_Project\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\PRN221\SWD221_Project\SWD221_Project\bin\Debug\net6.0-windows\EPPlus.dll
+D:\PRN221\SWD221_Project\SWD221_Project\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+D:\PRN221\SWD221_Project\SWD221_Project\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+D:\PRN221\SWD221_Project\SWD221_Project\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\PRN221\SWD221_Project\SWD221_Project\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\PRN221\SWD221_Project\SWD221_Project\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

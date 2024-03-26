@@ -42,7 +42,8 @@ namespace PRN221_Project
                                   WorkID = work.WorkId,
                                   WorkName = work.WorkName,
                                   WorkDescription = work.Description,
-                                  Complete = progress.Complete
+                                  Complete = progress.Complete,
+                                  ClassID = work.ClassId
                               }).ToList();
 
             lvWorkProgress.ItemsSource = joinedList;
@@ -171,6 +172,40 @@ namespace PRN221_Project
 
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string errorMessage = "";
+                if (string.IsNullOrEmpty(tbSearch.Text))
+                {
+                    errorMessage += "Search bar input is empty\n";
+                }
+                else
+                {
+                    string searchInput = tbSearch.Text;
+                    var searchResult = (from work in context.Works
+                                        join progress in context.StudentWorkProgresses on work.WorkId equals progress.WorkId
+                                        where progress.StudentId == tbStudentId.Text && work.ClassId == tbClassId.Text
+                                        select new
+                                        {
+                                            ProgressId = progress.ProgressId,
+                                            StudentID = progress.StudentId,
+                                            WorkID = work.WorkId,
+                                            WorkName = work.WorkName,
+                                            WorkDescription = work.Description,
+                                            Complete = progress.Complete,
+                                            ClassID = work.ClassId
+                                        });
+                    lvWorkProgress.ItemsSource = searchResult.Where(r => r.WorkName.Contains(searchInput) || r.WorkDescription.Contains(searchInput)).ToList();
+                }
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

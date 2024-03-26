@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN221_Project"
         mc:Ignorable="d"
-        Title="StudentsDetails" Loaded="Window_Loaded" Height="450" Width="800">
+        Title="StudentsDetails" Loaded="Window_Loaded" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -41,6 +41,10 @@
 
             <StackPanel Orientation="Horizontal">
                 <Button Margin="8" Height="30" Width="150" Name="btnStudentWorkProgress" Click="btnStudentWorkProgress_Click">StudentWorkProgress</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="8" Height="30" Width="70" Name="btnExportExcel" Click="btnExportExcel_Click">Export Excel</Button>
             </StackPanel>
         </StackPanel>
 

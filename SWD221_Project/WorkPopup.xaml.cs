@@ -91,7 +91,7 @@ namespace PRN221_Project
                 context.Works.Add(work);
                 context.SaveChanges();
                 LoadData();
-                MessageBox.Show($"Add student with id of {work.WorkId} Successfully !!");
+                MessageBox.Show($"Add work with id of {work.WorkId} Successfully !!");
             }
         }
 
@@ -119,7 +119,7 @@ namespace PRN221_Project
                     oldWork.Description = newWork.Description;
                     context.SaveChanges();
                     LoadData();
-                    MessageBox.Show($"Update student with id of {oldWork.WorkId} Successfully !!");
+                    MessageBox.Show($"Update work with id of {oldWork.WorkId} Successfully !!");
                 }
             }
             catch (Exception ex)
@@ -153,12 +153,13 @@ namespace PRN221_Project
                     {
                         MessageBox.Show(swp.ProgressId.ToString());
                         MessageBox.Show(swp.StudentId);
+                        context.StudentWorkProgresses.Remove(swp);
                     }
 
-                    //context.Works.Remove(deleWork);
-                    //context.SaveChanges();
+                    context.Works.Remove(deleWork);
+                    context.SaveChanges();
                     LoadData();
-                    MessageBox.Show($"Delete student with id of {WorkId} Successfully !!");
+                    MessageBox.Show($"Delete work with id of {WorkId} Successfully !!");
                 }
             }
             catch (Exception ex)

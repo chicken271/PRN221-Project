@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,6 +31,42 @@ namespace PRN221_Project
             roles = new List<String> { "Student","Teacher","Admin"  };
         }
 
+        public bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return false;
+            }
+
+            // Regular expression pattern for validating email addresses
+            string emailPattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+
+            // Use Regex.IsMatch to check if the email matches the pattern
+            return Regex.IsMatch(email, emailPattern);
+        }
+
+        public string GetPassword()
+        {
+            System.Security.SecureString securePassword = tbPassword.SecurePassword;
+
+            // Use the SecureStringToBSTR method to convert the SecureString to a BSTR (null-terminated Unicode string)
+            IntPtr bstr = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(securePassword);
+
+            try
+            {
+                // Use the PtrToStringBSTR to convert the BSTR to a managed string
+                return System.Runtime.InteropServices.Marshal.PtrToStringBSTR(bstr);
+            }
+            finally
+            {
+                // Zero out the memory to clear the sensitive data
+                if (bstr != IntPtr.Zero)
+                {
+                    System.Runtime.InteropServices.Marshal.ZeroFreeBSTR(bstr);
+                }
+            }
+        }
+
         public string Validation()
         {
             string errorMessage = "";
@@ -38,7 +75,7 @@ namespace PRN221_Project
                 errorMessage += "Email is a required field\n";
             }
 
-            if (string.IsNullOrEmpty(tbPassword.Text))
+            if (string.IsNullOrEmpty(GetPassword()))
             {
                 errorMessage += "Password is a required field\n";
             }
@@ -48,22 +85,27 @@ namespace PRN221_Project
                 errorMessage += "Role is a required value\n";
             }
 
+            if (IsValidEmail(tbEmail.Text) == false)
+            {
+                errorMessage += "Email field must be in the correct format\n";
+            }
+
             return errorMessage;
         }
 
         public Admin GetAdminByEmailAndPassword()
         {
-            return context.Admins.FirstOrDefault(x => x.Email.Equals(tbEmail.Text) && x.Password.Equals(tbPassword.Text));
+            return context.Admins.FirstOrDefault(x => x.Email.Equals(tbEmail.Text) && x.Password.Equals(GetPassword()));
         }
 
         public Student GetStudentByEmailAndPassword()
         {
-            return context.Students.FirstOrDefault(x => x.Email.Equals(tbEmail.Text) && x.Password.Equals(tbPassword.Text));
+            return context.Students.FirstOrDefault(x => x.Email.Equals(tbEmail.Text) && x.Password.Equals(GetPassword()));
         }
 
         public Teacher GetTeacherByEmailAndPassword()
         {
-            return context.Teachers.FirstOrDefault(x => x.Email.Equals(tbEmail.Text) && x.Password.Equals(tbPassword.Text));
+            return context.Teachers.FirstOrDefault(x => x.Email.Equals(tbEmail.Text) && x.Password.Equals(GetPassword()));
         }
 
 

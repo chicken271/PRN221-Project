@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:PRN221_Project"
         mc:Ignorable="d"
         Title="WorkProgressWindow" Loaded="Window_Loaded" Height="450" Width="800">
+    <Window.Resources>
+        <local:WorkConverter x:Key="WorkConverter"></local:WorkConverter>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -50,7 +53,7 @@
                         <GridViewColumn Width="110" DisplayMemberBinding="{Binding WorkID}" Header="Work ID"/>
                         <GridViewColumn Width="110" DisplayMemberBinding="{Binding WorkName}" Header="Work Name"/>
                         <GridViewColumn Width="110" DisplayMemberBinding="{Binding WorkDescription}" Header="Work Description"/>
-                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Complete}" Header="Complete"/>
+                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Complete, Converter= {StaticResource WorkConverter}}" Header="Complete"/>
                     </GridView>
                 </ListView.View>
             </ListView>

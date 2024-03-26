@@ -42,6 +42,11 @@
                 <Button Margin="8" Height="30" Width="70" Name="btnReload" Click="btnReload_Click">Reload</Button>
                 <Button Margin="8" Height="30" Width="70" Name="btnReturn" Click="btnReturn_Click">Return</Button>
             </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="8" Height="30" Width="70" Name="btnImportExcel" Click="btnImportExcel_Click">Import Excel</Button>
+                <Button Margin="8" Height="30" Width="70" Name="btnExportExcel" Click="btnExportExcel_Click">Export Excel</Button>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="10">

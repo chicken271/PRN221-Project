@@ -1,4 +1,5 @@
-﻿using SWD221_Project.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SWD221_Project.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -146,15 +147,18 @@ namespace PRN221_Project
                     string ClassId = tbClassId.Text;
                     Class deleClass = CheckClassId();
 
-                    List<BelongTo> removeFromClass = context.BelongTos.Where(x => x.ClassId == ClassId).ToList();
-                    foreach (BelongTo bt in removeFromClass)
+                    context.Database.ExecuteSqlRaw($"Delete from BelongTo where ClassID = '{ClassId}';");
+
+                    List<Attendance> removeAttendance = context.Attendances.Where(x => x.ClassId == ClassId).ToList();
+                    foreach(Attendance attendance in removeAttendance)
                     {
-                        MessageBox.Show(bt.StudentId);
-                        MessageBox.Show(bt.ClassId);
+                        context.Attendances.Remove(attendance);
                     }
 
-                    //context.Classes.Remove(deleClass);
-                    //context.SaveChanges();
+                    context.Database.ExecuteSqlRaw($"Update Work set ClassID = null where ClassID = '{ClassId}';");
+
+                    context.Classes.Remove(deleClass);
+                    context.SaveChanges();
                     LoadData();
                     MessageBox.Show($"Delete class with id of {ClassId} Successfully !!");
                 }
